@@ -31,7 +31,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: 'Host(`chuckzokoye.com`) || Host(`www.chuckzokoye.com`)'
+      rule: 'Host(`tests.chuckzokoye.com`) || Host(`tests.chuckzokoye.com`)'
       entryPoints:
         - web-secure
       middlewares:
@@ -42,7 +42,7 @@ http:
         certResolver: letsencrypt
 
     flower-secure-router:
-      rule: 'Host(`chuckzokoye.com`)'
+      rule: 'Host(`tests.chuckzokoye.com`)'
       entryPoints:
         - flower
       service: flower

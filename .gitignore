@@ -331,8 +331,8 @@ saas_subscriptions/media/
 .pytest_cache/
 .ipython/
 .env
-.envs/*
-!.envs/.local/
+#.envs/*
+#!.envs/.local/
 
 .idea/
 .idea/*
