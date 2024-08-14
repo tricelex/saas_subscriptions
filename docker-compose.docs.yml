@@ -1,0 +1,16 @@
+services:
+  docs:
+    image: saas_subscriptions_local_docs
+    container_name: saas_subscriptions_local_docs
+    build:
+      context: .
+      dockerfile: ./compose/local/docs/Dockerfile
+    env_file:
+      - ./.envs/.local/.django
+    volumes:
+      - ./docs:/docs:z
+      - ./config:/app/config:z
+      - ./saas_subscriptions:/app/saas_subscriptions:z
+    ports:
+      - '9000:9000'
+    command: /start-docs
